@@ -1,0 +1,44 @@
+*{
+     box-sizing: border-box;
+     padding: 0;
+     margin: 0;
+     font-family: sans-serif;
+}
+.products{
+     width: 40%;
+     margin: 1em 30%;
+     border: 2px solid grey;
+     padding: 2em 1em;
+     text-decoration: none;
+}
+.book>select{
+     width: 80%;
+     border: 1px solid grey;
+     display: block;
+     margin: 1em 0;
+     padding: 8px;
+     border-radius: 3px;
+}
+.products>p{
+     font-weight: lighter;
+     font-size: 12px;
+     margin: 1em 0;
+}
+.book>button{
+     display: block;
+     width: 40%;
+     align-self: left;
+     margin-right: 40%;
+     background-color: transparent;
+     border: 1px solid grey;
+     border-radius: 3px;
+     padding: 8px;
+}
+.book>button:hover{
+     background-color: #000000;
+     border: 1px solid #000000;
+     color: white;
+}
+.products>h1{
+     text-align: left;
+}

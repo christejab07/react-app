@@ -27,8 +27,8 @@ export default function Navbar() {
     <>
       <nav className="navbar">
         <div className="navbar-container">
-          <Link className="navbar-logo">
-            TRVL <i class="fab fa-typo3" onClick={closeMobileMenu} ></i>
+          <Link className="navbar-logo" to='/' onClick={closeMobileMenu}>
+            TRVL <i class="fab fa-typo3"></i>
           </Link>
           <div className="menu-icon" onClick={handleClick}>
             <i className={click ? "fas fa-times" : "fas fa-bars"} ></i>
@@ -46,12 +46,12 @@ export default function Navbar() {
             </li>
             <li className="nav-item">
               <Link to='/products' className="nav-links" onClick={closeMobileMenu}>
-                Products
+                Book Now
               </Link>
             </li>
             <li className="nav-item">
               <Link to='/sign-up' className="nav-link-mobile" onClick={closeMobileMenu}>
-                {button && <Button buttonStyle='btn--outline'>SIGN UP</Button>}
+                {button ? <Button buttonStyle= 'btn--outline'>SIGN UP</Button>: <i>SIGN UP</i>}
               </Link>
             </li>
           </ul>
