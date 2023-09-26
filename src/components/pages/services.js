@@ -5,7 +5,18 @@ import './services.css';
 export default function Services() {
      return (
           <div className="cards">
-               <h1>Services we offer:</h1>
+               <div className="drapeau">
+                    <div className="services">
+                    <i class="fa fa-circle-thin" aria-hidden="true"></i>
+                         <h2>Services we offer:</h2>
+                         <li>Alternative Accommodations</li>
+                         <li>Hotel Reservations</li>
+                         <li>Attractions and Experiences</li>
+                         <li>Airport Taxis and Transfers</li>
+                         <li>Flight Bookings</li>
+                         <li>Customer Reviews and Ratings</li>
+                    </div>
+               </div>
                <div className="cards__container">
                     <div className="cards__wrapper">
                          <h2>Travel in these cities with astonishing culture and nature: </h2>
