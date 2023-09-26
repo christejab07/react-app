@@ -101,6 +101,55 @@
    .amount:hover{
     text-decoration: underline solid rgb(0, 128, 255);
    }
+   .services{
+    background: linear-gradient(90deg, rgb(28, 27, 27) 0%, rgb(26, 23, 23) 100%);
+    color: #fff;
+    background-color: red;
+    text-align: left;
+    padding: 1rem 3rem;
+    width: 32%;
+    list-style-type: circle;
+    margin: 0.5rem 34%;
+    box-shadow: 10px 10px 20px rgba(43, 43, 43, 0.597);
+    animation: rotate 2s linear 0s infinite normal none;
+   }
+   .services:hover{
+    animation: none;
+   }
+   .services>h2{
+    margin: 0.8em 0;
+    text-align: left;
+    font-family: 'Trebuchet MS', 'Lucida Sans Unicode', 'Lucida Grande', 'Lucida Sans', Arial, sans-serif;
+   }
+   .fa-circle-thin{
+    background-color: transparent;
+    width: 30px;
+    height: 30px;
+    border-radius: 50%;
+    border: 2px solid #fff;
+    margin: 0 40%;
+    transition: all 0.2s ease;
+   }
+   .fa-circle-thin:hover{
+    background-color: #fff;
+   }
+   .services>li{
+    padding: 10px 0;
+    width: fit-content;
+    border: none;
+    transition: all 0.5s ease;
+    font-family: 'Trebuchet MS', 'Lucida Sans Unicode', 'Lucida Grande', 'Lucida Sans', Arial, sans-serif;
+   }
+   .services>li:hover{
+    border-bottom: 1px solid #fff;
+   }
+   @keyframes rotate {
+    0% {transform: rotate(0deg);}
+    25%{transform: rotate(5deg);}
+    50%{transform: rotate(0deg);}
+    75%{transform: rotate(-5deg);}
+    100% {transform: rotate(0deg);}
+  }
    @media only screen and (min-width: 1200px) {
      .content__blog__container {
        width: 84%;

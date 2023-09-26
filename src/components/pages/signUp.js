@@ -6,11 +6,15 @@ export default function Products() {
      const navigate = useNavigate()
      const [email, setEmail] = useState("")
      const [username, setUsername] = useState("")
+     const [phoneNumber, setphoneNumber] = useState('')
      const handleEmail = (e) => {
           setEmail(e.target.value)
      }
      const handleUsername = (e) => {
           setUsername(e.target.value)
+     }
+     const handleNumber = (e) =>{
+          setphoneNumber(e.target.value)
      }
      const handleSubmit = (e) => {
           e.preventDefault()
@@ -29,6 +33,7 @@ export default function Products() {
                          <div className="form-group">
                               <input type="text" name="username" id="username" placeholder="Enter your username" className="form-control" value={username} onChange={handleUsername} required />
                               <input type="email" name="email" id="email" placeholder="Enter your email" className="form-control" value={email} onChange={handleEmail} required />
+                              <input type="tel" name="phoneNumber" id="phoneNumber" placeholder="Enter your phoe number" className="form-control" value={phoneNumber} onChange={handleNumber} required />
                          </div>
                          <button type="submit" className="submit">Sign Up</button>
                     </form>

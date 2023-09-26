@@ -1,6 +1,5 @@
 import React, { useState } from "react";
 import { Link } from "react-router-dom";
-import { ServiceItem } from "../serviceItem";
 import "./products.css"
 
 export default function Products() {
@@ -18,13 +17,13 @@ export default function Products() {
      }
      const onsubmit = (e) =>{
           e.preventDefault()
-          setHotel()
+          alert(`Thank you for booking ${hotel}.`)
      }
      return (
                <div className="products">
                     <h1>Book now</h1>
                     <p>Select the name of the hotel</p>
-                    <form className="book">
+                    <form className="book" onSubmit={onsubmit}>
                          <select value={hotel} onChange={hotelChange}>
                               {hotels.map(hotel =>{
                                    return <option key={hotel} name={hotel}>{hotel}</option>

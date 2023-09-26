@@ -51,10 +51,11 @@ export default function Footer() {
                          </div>
                          <div className="footer-link-items">
                               <h2>Social media</h2>
-                                   <Link to='/'>Facebook</Link>
-                                   <Link to='/'>Instagram</Link>
-                                   <Link to='/'>Youtube</Link>
-                                   <Link to='/'>Twitter</Link>
+                                   <Link to='https://facebook.com/'>Facebook</Link>
+                                   <Link to='https://www.instagram.com/'>Instagram</Link>
+                                   <Link to='https://www.youtube.com/'>Youtube</Link>
+                                   <Link to='https://www.twitter.com/'>Twitter</Link>
+                                   <Link to='https://www.linkedin.com/'>LinkedIn</Link>
                          </div>
                     </div>
                </div>
@@ -67,19 +68,19 @@ export default function Footer() {
                          </div>
                          <small className="website-rights">TRVL @ 2023</small>
                          <div className="social-icons">
-                              <Link className="social-icon-link facebook" to='/' target={"_blank"} aria-label='Facebook'>
+                              <Link className="social-icon-link facebook" to='https://facebook.com/' target={"_blank"} aria-label='Facebook'>
                               <i class= "fab fa-facebook" />
                              </Link>
-                              <Link className="social-icon-link youtube" to='/' target={"_blank"} aria-label='Youtube'>
+                              <Link className="social-icon-link youtube" to='https://www.youtube.com/' target={"_blank"} aria-label='Youtube'>
                               <i class= "fab fa-youtube" />
                              </Link>
-                              <Link className="social-icon-link instagram" to='/' target={"_blank"} aria-label='Instagram'>
+                              <Link className="social-icon-link instagram" to='https://www.instagram.com/' target={"_blank"} aria-label='Instagram'>
                               <i class= "fab fa-instagram" />
                               </Link>
-                              <Link className="social-icon-link twitter" to='/' target={"_blank"} aria-label='Twitter'>
+                              <Link className="social-icon-link twitter" to='https://www.twitter.com/' target={"_blank"} aria-label='Twitter'>
                               <i class= "fab fa-twitter" />
                               </Link>
-                              <Link className="social-icon-link linkedin" to='/' target={"_blank"} aria-label='Linkedin'>
+                              <Link className="social-icon-link linkedin" to='https://www.linkedin.com/' target={"_blank"} aria-label='Linkedin'>
                               <i class= "fab fa-linkedin" />
                               </Link>
                          </div>
