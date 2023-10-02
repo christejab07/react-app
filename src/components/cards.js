@@ -15,11 +15,11 @@ export default function Cards() {
                               <ul className="cards__items">
                               <CardItem src="images/plexus-hytterne.jpg" text="Travel through these amazing places in Denmark(Plexus Hytterne)" label="Adventure" path="/services"/>
                               <CardItem src="images/Scandic-Pohjanhovi-Hotel.jpg" text="Explore these luxury hotels in Sweden(Scandic Pohjanhovi Hotel)" label="Luxury" path="/services"/>
-                              <CardItem src="images/huse gjestegard.jpg" text="Explore these home-like houses in Norway(Huse gjestegard)" label="Adventure" path="/services"/>
+                              <CardItem src="images/huse-gjestegard.jpg" text="Explore these home-like houses in Norway(Huse gjestegard)" label="Adventure" path="/services"/>
                               </ul>
                               <ul className="cards__items">
                               <CardItem src="images/valo-hotel.jpg" text="Explore these luxury hotels in Finland(Valo Hotel)" label="Luxury" path="/services"/>
-                              <CardItem src="images/Ice Cave.webp" text="Travel through these amazing places in Iceland(Ice Cave)" label="Adventure" path="/services"/>
+                              <CardItem src="images/Ice-Cave.webp" text="Travel through these amazing places in Iceland(Ice Cave)" label="Adventure" path="/services"/>
                               <CardItem src="images/COLOR-HOTEL-SKAGEN.jpg" text="Explore these luxury hotels in Denmark(Color Hotel Skagen)" label="Luxury" path="/services"/>
                               <CardItem src="images/comfort-hotel-copenhagen-airport.jpg" text="Take rest when you reach Denmark(Comfort Hotel at Copenhagen Airport)" label="Luxury" path="/services"/>
                          </ul>

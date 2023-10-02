@@ -30,7 +30,7 @@ export default function Services() {
                          <ul className="cards__items">
                               <ServiceItem src="images/nallikari-village.jpg" text="Nallikari holiday village, Finland" path="/products" label="book now" amount="$190.87" />
                               <ServiceItem src="images/plexus-hytterne.jpg" text="Plexus Hytterne, Denmark" path="/products" label="book now" amount="$190.87" />
-                              <ServiceItem src="images/huse gjestegard.jpg" text="Huse gjestegard, Norway" path="/products" label="book now" amount="$190.87" />
+                              <ServiceItem src="images/huse-gjestegard.jpg" text="Huse gjestegard, Norway" path="/products" label="book now" amount="$190.87" />
                               <ServiceItem src="images/Hotel_Ranga.jpg" text="Hotel Ranga, Iceland" path="/products" label="book now" amount="$190.87" />
                          </ul>
                          <h2>Rest in a good and comfortable hotel with a good view of nature:</h2>

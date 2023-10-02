@@ -15,7 +15,7 @@ export function ServiceItem(props){
                          <i className="fa fa-star" aria-hidden="true"></i>
                          <i className="fa fa-star" aria-hidden="true"></i>
                          <i className="fa fa-star-half" aria-hidden="true"></i>
-               <a href="https://www.xe.com/currencyconverter/" className="amount" target="_blank" rel="noreferrer">{props.amount}</a>
+               <a href="/products" className="amount" target="_blank" rel="noreferrer">{props.amount}</a>
                     </div>
                </Link>
           </li>
