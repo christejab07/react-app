@@ -110,11 +110,13 @@
     width: 32%;
     list-style-type: circle;
     margin: 0.5rem 34%;
-    box-shadow: 10px 10px 20px rgba(43, 43, 43, 0.597);
+    box-shadow: 5px 5px 20px rgba(78, 78, 78, 0.597);
     animation: rotate 2s linear 0s infinite normal none;
+    transition: all 1s ease-in;
    }
    .services:hover{
     animation: none;
+    box-shadow: 5px 5px 20px rgba(43, 43, 43, 0.597);
    }
    .services>h2{
     margin: 0.8em 0;
