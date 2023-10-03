@@ -4,7 +4,7 @@ import { useNavigate, Link } from "react-router-dom";
 import axios from "axios";
 const url = "http://localhost:5000/client/add";
 
-export default function Products() {
+export default function Signup() {
   const navigate = useNavigate();
   const [email, setEmail] = useState("");
   const [username, setUsername] = useState("");
@@ -36,7 +36,7 @@ export default function Products() {
       // Redirect the user to the home page
       console.log('client registered successfully');
       alert(`Welcome ${client.username}`)
-      navigate("/");
+      navigate("/login");
     } catch (error) {
       // Handle the error response
       console.error(error.message);
