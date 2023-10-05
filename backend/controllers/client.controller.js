@@ -1,7 +1,7 @@
 const clients = require("../models/client.model");
-const bcrypt = require("bcrypt");
-const express = require('express');
 const jwt = require('jsonwebtoken');
+const express = require('express')
+const bcrypt = require('bcrypt')
 exports.insert = async (req, res) => {
   if (
     !req.body.username &&
@@ -11,28 +11,32 @@ exports.insert = async (req, res) => {
   ) {
     console.log("Data to be inserted can not be empty!");
   }
-};
+
 const client = new clients({
   username: req.body.username,
   phoneNumber: req.body.phoneNumber,
   email: req.body.email,
-  password: bcrypt.hash(req.body.password, 10),
+  password: req.body.password
 });
 
-await client
-  .save()
-  .then((data) => {
-    res.send({
-      message: "Client saved successfully",
-      client: data,
-    });
-  })
-  .catch((err) => {
-    res.status(500).send({
-      message: "An error was found.",
-      error: err.message,
-    });
+try {
+  const salt = await bcrypt.genSalt(10);
+  const hashedPassword = await bcrypt.hash(client.password, salt);
+  client.password = hashedPassword;
+
+  const savedClient = await client.save();
+  res.status(201).send({
+    message: "Client saved successfully",
+    client: savedClient,
   });
+} catch (err) {
+  console.error(err);
+  res.status(500).send({
+    message: "An error was found.",
+    error: err.message,
+  });
+}
+}
 exports.findAll = async (req, res) => {
   try {
     const users = await clients.find();
@@ -51,18 +55,21 @@ exports.findOne = async (req, res) => {
 };
 
 exports.login = async (req, res) => {
-  const { username, password } = req.body;
+  const { email, password } = req.body;
 
-  const user = await clients.findOne({ username });
+  const user = await clients.findOne({ email });
   if (!user) {
-    return res.status(401).json({ message: 'Invalid username or password' });
+    return res.status(401).json({ message: 'Unknown email' });
   }
-
-  const isPasswordValid = await bcrypt.compare(password, user.password);
-  if (!isPasswordValid) {
-    return res.status(401).json({ message: 'Invalid username or password' });
+  try {
+    const isPasswordValid = await bcrypt.compare(password, user.password);
+    if (!isPasswordValid) {
+      return res.status(401).json({ message: 'Email entered doesn\'t match the password' });
+    }
+  } catch (error) {
+    return res.status(500).json({ message: 'An error occurred while comparing passwords.', error });
   }
   const token = jwt.sign({ id: user._id }, process.env.JWT_SECRET, { expiresIn: '1h' });
-  res.json({ token });
+  res.status(201).json({ message: 'User logged in successfully', token });
   
 }

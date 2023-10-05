@@ -2,8 +2,7 @@ import React, { useState } from "react";
 import "../../App.css";
 import { useNavigate, Link } from "react-router-dom";
 import axios from "axios";
-// const url = "http://localhost:5000/client/add";
-
+import URL from '../../urls';
 export default function Login() {
   const navigate = useNavigate();
   const [email, setEmail] = useState("");
@@ -21,11 +20,17 @@ export default function Login() {
       password: password
     };
     console.log(client);
-    const response = await axios.post('/login', client);
-    const token = response.data.token;
-    localStorage.setItem('token', token);
-
-    navigate('/');
+    try {
+      const response = await axios.post(`${URL}/login`, client);
+      const token = response.data.token;
+      localStorage.setItem('token', token);
+      console.log(token);
+      alert("User logged in successfully");
+      navigate('/');
+      
+    } catch (error) {
+      console.error(error.message);
+    }
 
   };
   return (
@@ -56,7 +61,7 @@ export default function Login() {
               value={password}
               onChange={handlePassword}
               required
-              pattern="^(?=.*[a-z])(?=.*\d).{8,}$"
+              // pattern="^(?=.*[a-z])(?=.*\d).{8,}$"
             />
           </div>
           <button type="submit" className="submit">
