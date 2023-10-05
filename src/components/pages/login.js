@@ -2,7 +2,7 @@ import React, { useState } from "react";
 import "../../App.css";
 import { useNavigate, Link } from "react-router-dom";
 import axios from "axios";
-import URL from '../../urls';
+const URL = 'https://travel-backend-jrfz.onrender.com'
 export default function Login() {
   const navigate = useNavigate();
   const [email, setEmail] = useState("");
@@ -21,7 +21,7 @@ export default function Login() {
     };
     console.log(client);
     try {
-      const response = await axios.post(`${URL}/login`, client);
+      const response = await axios.post(`${URL}/client/login`, client);
       const token = response.data.token;
       localStorage.setItem('token', token);
       console.log(token);
@@ -39,7 +39,7 @@ export default function Login() {
         TRVL <i class="fab fa-typo3"></i>
       </Link>
       <div className="login-cont">
-        <h1 className="heading">Sign up to continue</h1>
+        <h1 className="heading">Login to continue</h1>
         <form onSubmit={handleSubmit}>
           <div className="form-group">
             <input
@@ -65,7 +65,7 @@ export default function Login() {
             />
           </div>
           <button type="submit" className="submit">
-            Sign Up
+            Log In
           </button>
         </form>
       </div>

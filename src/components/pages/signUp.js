@@ -2,7 +2,7 @@ import React, { useState } from "react";
 import "../../App.css";
 import { useNavigate, Link } from "react-router-dom";
 import axios from "axios";
-import URL from "../../urls";
+const URL = 'https://travel-backend-jrfz.onrender.com'
 export default function Signup() {
   const navigate = useNavigate();
   const [email, setEmail] = useState("");
@@ -29,9 +29,8 @@ export default function Signup() {
       email: email,
       password: password,
     };
-console.log(client);
     try {
-      await axios.post(`${URL}/add`, client);
+      await axios.post(`${URL}/client/add`, client);
       // Redirect the user to the home page
       console.log('client registered successfully');
       alert(`Welcome ${client.username}`)
