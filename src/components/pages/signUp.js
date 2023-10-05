@@ -2,9 +2,8 @@ import React, { useState } from "react";
 import "../../App.css";
 import { useNavigate, Link } from "react-router-dom";
 import axios from "axios";
-const url = "http://localhost:5000/client/add";
-
-export default function Products() {
+import URL from "../../urls";
+export default function Signup() {
   const navigate = useNavigate();
   const [email, setEmail] = useState("");
   const [username, setUsername] = useState("");
@@ -30,13 +29,13 @@ export default function Products() {
       email: email,
       password: password,
     };
-
+console.log(client);
     try {
-      await axios.post(url, client);
+      await axios.post(`${URL}/add`, client);
       // Redirect the user to the home page
       console.log('client registered successfully');
       alert(`Welcome ${client.username}`)
-      navigate("/");
+      navigate("/login");
     } catch (error) {
       // Handle the error response
       console.error(error.message);
@@ -91,7 +90,6 @@ export default function Products() {
               value={password}
               onChange={handlePassword}
               required
-              pattern="^(?=.*[a-z])(?=.*\d).{8,}$"
             />
           </div>
           <button type="submit" className="submit">
