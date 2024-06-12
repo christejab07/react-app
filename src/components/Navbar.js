@@ -54,6 +54,11 @@ export default function Navbar() {
                 {button ? <Button buttonStyle= 'btn--outline'>SIGN UP</Button>: <i>SIGN UP</i>}
               </Link>
             </li>
+            <li className="nav-item">
+              <Link to='/login' className="nav-link-mobile" onClick={closeMobileMenu}>
+                <button className="login">LOGIN</button>
+              </Link>
+            </li>
           </ul>
         </div>
       </nav>

@@ -6,6 +6,7 @@ import {Home} from './components/pages/home'
 import Services from "./components/pages/services";
 import Signup from "./components/pages/signUp";
 import Products from "./components/pages/products";
+import Login from "./components/pages/login";
 
 export default function App(){
   return(
@@ -18,6 +19,7 @@ export default function App(){
         <Route path="/services" Component={Services} />
         <Route path="/products" Component={Products} />
         <Route path="/sign-up" Component={Signup} />
+        <Route path="/login" Component={Login} />
         </Routes>
       </switch>
       </Router>
